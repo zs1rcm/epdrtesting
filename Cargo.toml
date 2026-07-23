@@ -1,0 +1,13 @@
+[package]
+name = "ztas-test"
+version = "0.1.0"
+edition = "2021"
+
+[[bin]]
+name = "ztas-test"
+path = "src/main.rs"
+
+[profile.release]
+# Keep it small and simple; no fancy opts needed for a test artifact.
+opt-level = "z"
+strip = false
